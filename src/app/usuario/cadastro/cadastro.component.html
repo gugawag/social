@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-content>
+    <mat-form-field>
+      <input [(ngModel)]="usuario.nome" matInput
+             placeholder="Nome">
+    </mat-form-field>
+    <mat-form-field>
+      <input [(ngModel)]="usuario.idade" matInput
+             placeholder="Idade">
+    </mat-form-field>
+    <mat-form-field>
+      <input [(ngModel)]="usuario.login" matInput
+             placeholder="Login">
+    </mat-form-field>
+
+  </mat-card-content>
+</mat-card>
+
+<button
+  type="button"
+  (click)="cadastrar()"
+  mat-raised-button
+>Cadastrar
+</button>
+
+<ul>
+  <li *ngFor="let usuario of usuarios">{{usuario.nome}}</li>
+</ul>
